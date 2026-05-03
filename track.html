@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+ <nav class="navbar">
+  <div class="logo">MeCargo</div>
+
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="track.html" class="active">Track Order</a>
+    <a href="statuses.html">Statuses</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+    <a href="orders.html">Orders</a>
+  </div>
+</nav>
+<main class="container">
+  <h1>Track Your Order</h1>
+  <p class="subtitle">Enter order number to check current status.</p>
+
+  <section class="card">
+    <input type="text" id="trackInput" placeholder="OBJ-2026-00125">
+    <button onclick="trackOrder()">Search</button>
+  </section>
+
+  <section class="card" id="trackResult">
+    <p>Order detail will appear here.</p>
+  </section>
+</main>
+
+<script src="data/storage.js"></script>
+<script src="data/track.js"></script>
+
+
+</header>
+
+
+
+
+
+</body>
+</html>

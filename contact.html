@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+  <div class="logo">MeCargo</div>
+
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="track.html">Track Order</a>
+    <a href="statuses.html">Statuses</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html" class="active">Contact</a>
+    <a href="orders.html">Orders</a>
+  </div>
+</nav>
+
+<main class="container">
+  <h1>Contact Form</h1>
+  <p class="subtitle">Send us your question about your order.</p>
+
+  <section class="card">
+    <form onsubmit="return validateForm()">
+      <label>Name:</label>
+      <input type="text" id="name">
+
+      <label>Email:</label>
+      <input type="email" id="email">
+
+      <label>Order number:</label>
+      <input type="text" id="orderNumber">
+
+      <label>Message:</label>
+      <textarea id="message"></textarea>
+
+      <label>Request type:</label>
+      <div class="radio-group">
+        <label><input type="radio" name="requestType" value="Complaint"> Complaint</label>
+        <label><input type="radio" name="requestType" value="Question"> Question</label>
+      </div>
+
+      <label class="checkbox-row">
+        <input type="checkbox" id="agree">
+        I agree with processing my request.
+      </label>
+
+      <button type="submit">Send message</button>
+    </form>
+  </section>
+</main>
+</header>
+
+
+
+<script>
+function validateForm() {
+  let name = document.getElementById("name").value.trim();
+  let email = document.getElementById("email").value.trim();
+  let orderNumber = document.getElementById("orderNumber").value.trim();
+  let message = document.getElementById("message").value.trim();
+  let agree = document.getElementById("agree").checked;
+  let requestType = document.querySelector('input[name="requestType"]:checked');
+
+  if (name === "") {
+    alert("Please enter your name.");
+    return false;
+  }
+
+  if (email === "" || !email.includes("@")) {
+    alert("Please enter a valid email.");
+    return false;
+  }
+
+  if (orderNumber === "") {
+    alert("Please enter order number.");
+    return false;
+  }
+
+  if (message.length < 5) {
+    alert("Message must have at least 5 characters.");
+    return false;
+  }
+
+  if (!requestType) {
+    alert("Please choose request type.");
+    return false;
+  }
+
+  if (!agree) {
+    alert("You must agree before sending.");
+    return false;
+  }
+
+  alert("Form was sent successfully.");
+  return true;
+}
+</script>
+
+</body>
+</html>

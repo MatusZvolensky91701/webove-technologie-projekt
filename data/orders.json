@@ -1,0 +1,64 @@
+{
+  "orders": [
+    {
+      "id": "OBJ-2026-00125",
+      "customer": {
+        "name": "Matus Zvolensky",
+        "contact": {
+          "email": "matus@example.com",
+          "phone": "+421900123456"
+        }
+      },
+      "status": {
+        "current": "Shipped",
+        "updated": "2026-04-16",
+        "history": [
+          { "name": "Received", "date": "2026-04-12" },
+          { "name": "Processing", "date": "2026-04-14" },
+          { "name": "Shipped", "date": "2026-04-16" }
+        ]
+      },
+      "note": "Order prepared for shipping."
+    },
+    {
+      "id": "OBJ-2026-00126",
+      "customer": {
+        "name": "Peter Novak",
+        "contact": {
+          "email": "peter@example.com",
+          "phone": "+421911222333"
+        }
+      },
+      "status": {
+        "current": "Processing",
+        "updated": "2026-04-18",
+        "history": [
+          { "name": "Received", "date": "2026-04-17" },
+          { "name": "Processing", "date": "2026-04-18" }
+        ]
+      },
+      "note": "Order is being prepared."
+    },
+    {
+      "id": "OBJ-2026-00127",
+      "customer": {
+        "name": "Anna Kovacova",
+        "contact": {
+          "email": "anna@example.com",
+          "phone": "+421944555666"
+        }
+      },
+      "status": {
+        "current": "Delivered",
+        "updated": "2026-04-20",
+        "history": [
+          { "name": "Received", "date": "2026-04-15" },
+          { "name": "Processing", "date": "2026-04-16" },
+          { "name": "Shipped", "date": "2026-04-18" },
+          { "name": "Delivered", "date": "2026-04-20" }
+        ]
+      },
+      "note": "Successfully delivered."
+    }
+  ]
+}
